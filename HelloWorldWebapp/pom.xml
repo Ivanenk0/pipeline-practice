@@ -10,6 +10,8 @@
   <packaging>war</packaging>
 
   <name>HelloWorldWebapp Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://192.168.56.101:8085/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
