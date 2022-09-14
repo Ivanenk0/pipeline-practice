@@ -19,23 +19,9 @@
                 text-align: center;
                 border-radius: 10px;
             }
-            #pipeline-image {
-                width: 150px;
-                height: 150px;
-                align-items: left;
-            }
-            .image {
-                width: 150px;
-                height: 150px;
-            }
-            .project-info {
-                width: 180px;
-                height: 150px;
-                text-align: center;
-                margin-left: 20px;
-            }
             .header {
-                display: flex;
+                height: 150px;
+                align-self: center;
             }
             #name {
                 font-size: 40px;
@@ -74,13 +60,8 @@
     <body>
         <div class="content">
             <div class="header">
-                <div class="image">
-                    <img src="HelloWorldWebapp/src/main/resources/pipeline.png" alt="pipeline img" id="pipeline-image">
-                </div>  <!-- END OF .IMAGE -->
-                <div class="project-info">
-                    <p id="name">Pipeline</p>
-                    <p id="tools">Jenkins<br />Tomcat<br />PostgreSQL</p>
-                </div>  <!-- END OF .PROJECT-INFO -->
+                <p id="name">Pipeline</p><br />
+                <p id="tools">Jenkins<br />Tomcat<br />PostgreSQL</p>
             </div>  <!-- END OF .HEADER -->
             <div class="navigation">
                 <form>
