@@ -21,17 +21,15 @@ public class PostgreSQL implements DatabaseConnection{
             return connection;
         } catch (SQLException e) {
             e.printStackTrace();
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         }
     }
-    public Class getDriver() {
+    public void getDriver() {
         try {
-            Class pgDriver = Class.forName(postgresDriver);
-            System.out.println(PostgreSQL.this + "\t| Creating PostgreSQL connection");
-            return pgDriver;
+            Class.forName(postgresDriver);
+            System.out.println(PostgreSQL.this + "\t| Creating PostgreSQL Driver Class instance");
         } catch(ClassNotFoundException e) {
             e.printStackTrace();
-            throw new RuntimeException();
         }
     }
 }

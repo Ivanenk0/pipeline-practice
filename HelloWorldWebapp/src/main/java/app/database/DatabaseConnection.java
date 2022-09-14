@@ -5,6 +5,6 @@ import java.sql.Driver;
 
 public interface DatabaseConnection {
     Connection getConnection();
-    Class getDriver();
+    void getDriver();
 
 }

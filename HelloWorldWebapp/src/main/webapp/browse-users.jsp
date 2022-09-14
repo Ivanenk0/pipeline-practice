@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +72,7 @@
                     <th>Surname</th>
                     <th>Age</th>
                 </tr>
-
+                <% ResultSet rs = request. %>
                 <tr>
                     <td>1</td>
                     <td>Dima</td>

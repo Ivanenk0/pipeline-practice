@@ -66,10 +66,10 @@
             </div>  <!-- END OF .HEADER -->
             <div class="navigation">
                 <form action="homepage" method="get">
-                    <input type="button" value="Browse users">
-                    <input type="button" value="Add new user">
-                    <input type="button" value="Remove user">
-                    <input type="button" value="Modify user">
+                    <input type="button" value="Browse users" name="submit">
+                    <input type="button" value="Add new user" name="submit">
+                    <input type="button" value="Remove user" name="submit">
+                    <input type="button" value="Modify user" name="submit">
                 </form>
             </div>  <!-- END OF .NAVIGATION -->
         </div>  <!-- END OF .CONTENT -->
