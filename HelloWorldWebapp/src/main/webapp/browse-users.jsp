@@ -11,8 +11,8 @@
         html {
             background-color: #72727e;
             font-family: monospace;
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
         }
         .content {
             width: fit-content;
@@ -42,9 +42,6 @@
             background-color: #bbbdf6;
             color: black;
         }
-        .database-response {
-            background-color: darkorange;
-        }
         table {
             width: fit-content;
             font-size: 15px;
@@ -52,7 +49,7 @@
             border-collapse: collapse;
         }
         th, td {
-            padding: 0px 15px;
+            padding: 0 15px;
         }
         table, th, td {
             border: 1px solid #72727e;
@@ -72,18 +69,24 @@
                     <th>Surname</th>
                     <th>Age</th>
                 </tr>
-                <% ResultSet rs = request. %>
+                <%
+                    ResultSet rs = (ResultSet) request.getAttribute("resultSet");
+                    while(rs.next()) {
+                %>
                 <tr>
-                    <td>1</td>
-                    <td>Dima</td>
-                    <td>Ivanenko</td>
-                    <td>21</td>
+                    <td><% rs.getInt("user_id"); %></td>
+                    <td><% rs.getString("name"); %></td>
+                    <td><% rs.getString("surname"); %></td>
+                    <td><% rs.getInt("age"); %></td>
                 </tr>
+                <%
+                    }
+                %>
             </table>
 
         <div class="navigation">
-            <form>
-                <input type="button" value="Back to HomePage">
+            <form action="homepage" method="get">
+                <input type="button" value="Back to HomePage" name="submit">
             </form>
         </div>  <!-- END OF .NAVIGATION -->
     </div>  <!-- END OF .CONTENT -->
