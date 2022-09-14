@@ -7,11 +7,11 @@
 
   <servlet>
     <servlet-name>TableBrowser</servlet-name>
-    <servlet-class>TableBrowser</servlet-class>
+    <servlet-class>app.servlets.TableBrowser</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>HomePage</servlet-name>
-    <servlet-class>HomePage</servlet-class>
+    <servlet-class>app.servlets.HomePage</servlet-class>
   </servlet>
 
   <servlet-mapping>
