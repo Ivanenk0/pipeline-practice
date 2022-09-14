@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class HomePage extends HttpServlet {
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         switch (request.getParameter("submit")) {
             case "Browse users" :

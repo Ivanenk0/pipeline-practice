@@ -65,7 +65,7 @@
                 <p id="tools">Jenkins<br />Tomcat<br />PostgreSQL</p>
             </div>  <!-- END OF .HEADER -->
             <div class="navigation">
-                <form action="/homepage" method="get">
+                <form action="homepage" method="POST">
                     <input type="button" value="Browse users" name="submit">
                     <input type="button" value="Add new user" name="submit">
                     <input type="button" value="Remove user" name="submit">
