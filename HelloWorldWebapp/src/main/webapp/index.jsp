@@ -8,8 +8,8 @@
             html {
                 background-color: #72727e;
                 font-family: monospace;
-                margin: 0px;
-                padding: 0px;
+                margin: 0;
+                padding: 0;
             }
             .content {
                 width: 350px;
@@ -26,12 +26,12 @@
             }
             #name {
                 font-size: 40px;
-                padding: 0px;
+                padding: 0;
                 margin: 5px;
             }
             #tools {
                 font-size: 15px;
-                padding: 0px;
+                padding: 0;
                 margin: 5px;
             }
             input {
@@ -50,11 +50,11 @@
             }
             .footer {
                 width: 200px;
-                margin: 100px auto 0px;
+                margin: 100px auto 0;
                 padding: 25px 20px;
                 text-align-last: center;
                 background-color: #bbbdf6;
-                border-radius: 10px 10px 0px 0px;
+                border-radius: 10px 10px 0 0;
             }
         </style>
     </head>
@@ -65,7 +65,7 @@
                 <p id="tools">Jenkins<br />Tomcat<br />PostgreSQL</p>
             </div>  <!-- END OF .HEADER -->
             <div class="navigation">
-                <form action="homepage" method="get">
+                <form action="/homepage" method="get">
                     <input type="button" value="Browse users" name="submit">
                     <input type="button" value="Add new user" name="submit">
                     <input type="button" value="Remove user" name="submit">
