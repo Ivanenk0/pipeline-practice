@@ -75,7 +75,7 @@
         <div class="content">
             <div class="header">
                 <div class="image">
-                    <img src="./pipeline.png" alt="pipeline img" id="pipeline-image">
+                    <img src="./src/main/resources/pipeline.png" alt="pipeline img" id="pipeline-image">
                 </div>  <!-- END OF .IMAGE -->
                 <div class="project-info">
                     <p id="name">Pipeline</p>
