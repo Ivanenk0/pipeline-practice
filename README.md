@@ -1,5 +1,6 @@
 # pipeline-practice
-Work on the creation of the pipeline system. Practice with Jenkins &amp; Tomcat
+Repository for practice of creating a pipeline system.
 
-some new text for jenkins
-:) ~~~~~~~
+Automation server : Jenkins
+Servlet container : Tomcat
+Database : PostgreSQL
