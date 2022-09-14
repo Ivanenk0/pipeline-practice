@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
         <title>HomePage</title>
@@ -64,7 +65,7 @@
                 <p id="tools">Jenkins<br />Tomcat<br />PostgreSQL</p>
             </div>  <!-- END OF .HEADER -->
             <div class="navigation">
-                <form>
+                <form action="homepage" method="get">
                     <input type="button" value="Browse users">
                     <input type="button" value="Add new user">
                     <input type="button" value="Remove user">
