@@ -61,7 +61,6 @@
         <div class="header">
             <p>Browse users</p>
         </div>  <!-- END OF .HEADER -->
-
             <table>
                 <tr>
                     <th>User ID</th>
@@ -71,19 +70,23 @@
                 </tr>
                 <%
                     ResultSet rs = (ResultSet) request.getAttribute("resultSet");
-                    while(rs.next()) {
+                    if(!rs.next()) {
+                        out.println("No records found in the table");
+                    }
+                    else {
+                        while(rs.next()) {
                 %>
                 <tr>
-                    <td><% rs.getInt("user_id"); %></td>
-                    <td><% rs.getString("name"); %></td>
-                    <td><% rs.getString("surname"); %></td>
-                    <td><% rs.getInt("age"); %></td>
+                    <td><%= rs.getInt("user_id")%></td>
+                    <td><%= rs.getString("name")%></td>
+                    <td><%= rs.getString("surname")%></td>
+                    <td><%= rs.getInt("age")%></td>
                 </tr>
                 <%
+                        }
                     }
                 %>
             </table>
-
         <div class="navigation">
             <form action="homepage" method="get">
                 <input type="button" value="Back to HomePage" name="submit">

@@ -3,6 +3,7 @@ package app.servlets;
 import app.database.PostgreSQL;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+@WebServlet(name="TableBrowser", value="/table-browser")
 public class TableBrowser extends HttpServlet {
 
     @Override
@@ -24,9 +26,6 @@ public class TableBrowser extends HttpServlet {
         ResultSet resultSet = null;
         Connection connection = pgDatabase.getConnection();
         pgDatabase.getDriver();
-
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
 
         try {
             statement = connection.createStatement();
@@ -46,5 +45,13 @@ public class TableBrowser extends HttpServlet {
 
         request.setAttribute("resultSet", resultSet);
         request.getRequestDispatcher("browse-users").forward(request, response);
+
+        try {
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

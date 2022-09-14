@@ -65,11 +65,11 @@
                 <p id="tools">Jenkins<br />Tomcat<br />PostgreSQL</p>
             </div>  <!-- END OF .HEADER -->
             <div class="navigation">
-                <form action="homepage" method="POST">
-                    <input type="button" value="Browse users" name="submit">
-                    <input type="button" value="Add new user" name="submit">
-                    <input type="button" value="Remove user" name="submit">
-                    <input type="button" value="Modify user" name="submit">
+                <form action="<%= request.getContextPath()%>/homepage" method="POST">
+                    <input type="submit" value="Browse users" name="submit">
+                    <input type="submit" value="Add new user" name="submit">
+                    <input type="submit" value="Remove user" name="submit">
+                    <input type="submit" value="Modify user" name="submit">
                 </form>
             </div>  <!-- END OF .NAVIGATION -->
         </div>  <!-- END OF .CONTENT -->
